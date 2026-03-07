@@ -11,6 +11,7 @@ public class BedRoom {
     private int roomId;
     private String room;
     private String roomType;
+    private BedRoomType bedRoomType;
     private double price;
     private boolean state;
 
@@ -21,9 +22,14 @@ public class BedRoom {
 
     }
 
-
-
-
+    public BedRoom(int roomId, String room, String roomType,BedRoomType type,double price, boolean state) {
+        this.roomId = roomId;
+        this.room = room;
+        this.roomType = roomType;
+        this.bedRoomType = type;
+        this.price = price;
+        this.state = state;
+    }
 
     public BedRoom(String room) {
         this.room = room;
@@ -70,6 +76,14 @@ public class BedRoom {
 
     public void setState(boolean state) {
         this.state = state;
+    }
+
+    public BedRoomType getBedRoomType() {
+        return bedRoomType;
+    }
+
+    public void setBedRoomType(BedRoomType bedRoomType) {
+        this.bedRoomType = bedRoomType;
     }
 
     // Methods
